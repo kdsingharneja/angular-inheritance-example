@@ -1,0 +1,57 @@
+<!doctype html>
+<html ng-app="MyApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Inheritance</title>
+
+  <link rel="stylesheet" type="text/css" href="../bootstrap/dist/css/bootstrap.min.css">
+  <style type="text/css">
+  .list-group {
+    margin-top: 50px;
+    width: 500px;
+  }
+  </style>
+</head>
+
+<body>
+  <br>
+  <br>
+  <div class="container" ng-controller="DemoCtrl">
+
+    <button class="btn-primary" ng-click="fetchStateData()">Fetch State Data</button>
+    <div class="list-group">
+      <a href="#" class="list-group-item" ng-repeat="state in states">
+        <span class="glyphicon"></span> {{ state.stateData.name }} (Timezone: {{ state.stateData.capitol_timezone }}) <span class="badge">{{ state.stateData.noOfEvents }}</span>
+      </a>
+    </div>
+    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+       Short Cut
+    </a>
+    <div class="collapse" id="collapseExample">
+      <div class="well">
+        <pre>
+          module.controller('SuperCtrlImpl', ['$scope', '$controller', function ($scope, $controller) {
+
+          // Initialize the super class and extend it.
+            $.extend(this, $controller('SuperCtrl', {$scope: $scope}));
+
+           //do your stuff here
+          }]);
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="../angular/angular.min.js"></script>
+  <script src="../angular-resource/angular-resource.min.js"></script>
+  <script src="../angular-route/angular-route.min.js"></script>
+
+  <script src="../jquery/dist/jquery.js"></script>
+  <script src="../bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../lodash/lodash.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+</body>
+
+</html>

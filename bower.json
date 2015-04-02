@@ -1,0 +1,25 @@
+{
+  "name": "angular-inheritance-example",
+  "authors": [
+    "KD Singh <kanwaldeep@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "latest",
+    "angular-resource": "latest",
+    "angular-route": "latest",
+    "lodash": "latest",
+    "async": "~0.2.5",
+    "meld": "latest"
+  },
+  "devDependencies": {
+    "angular-mocks": "latest"
+  }
+}
